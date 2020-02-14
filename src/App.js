@@ -13,7 +13,8 @@ function App() {
                 id,
                 document.getElementById("tweet"),
                 {
-                    cards: true
+                    cards: true,
+                    conversation: "none"
                 }
             );
         }
