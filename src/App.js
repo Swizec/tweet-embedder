@@ -9,14 +9,16 @@ function App() {
         if (tweetUrl) {
             const id = tweetUrl.split("/status/")[1];
 
-            window.twttr.widgets.createTweet(
-                id,
-                document.getElementById("tweet"),
-                {
-                    cards: true,
-                    conversation: "none"
-                }
-            );
+            window.twttr.ready(() => {
+                window.twttr.widgets.createTweet(
+                    id,
+                    document.getElementById("tweet"),
+                    {
+                        cards: true,
+                        conversation: "none",
+                    }
+                );
+            });
         }
     }, []);
 
