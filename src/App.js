@@ -16,6 +16,7 @@ function App() {
                     {
                         cards: true,
                         conversation: "none",
+                        width: 550,
                     }
                 );
             });
@@ -24,7 +25,7 @@ function App() {
 
     return (
         <div className="App">
-            <div id="tweet"></div>
+            <div id="tweet" style={{ width: "550px" }}></div>
         </div>
     );
 }
